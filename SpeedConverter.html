@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kilometers per Hour to Miles per Hour Converter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .converter {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .converter input, .converter button {
+            margin: 10px 0;
+            padding: 10px;
+            width: 100%;
+            font-size: 1em;
+        }
+    </style>
+</head>
+<body>
+    <div class="converter">
+        <h1>Kilometers to Miles Converter</h1>
+        <label for="kmhInput">Kilometers per hour:</label>
+        <input type="number" id="kmhInput" placeholder="Enter value in km/h">
+        <button onclick="convert()">Convert to Miles per Hour</button>
+        <p id="result"></p>
+    </div>
+
+    <script>
+        function convert() {
+            const kmh = document.getElementById('kmhInput').value;
+            const mph = kmh * 0.621371;
+            document.getElementById('result').textContent = `${kmh} km/h is equal to ${mph.toFixed(2)} mph`;
+        }
+    </script>
+</body>
+</html>
